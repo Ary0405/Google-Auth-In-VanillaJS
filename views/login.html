@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
-    <!-- <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script> -->
-    <!-- <script src="https://accounts.google.com/gsi/client" async defer></script> -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id"
         content="276359144026-14uh8l75abppnn4cps3gmfrmu8112ai3.apps.googleusercontent.com">
     <title>Document</title>
@@ -18,14 +16,6 @@
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
     <script>
-        function init() {
-            gapi.load('auth2', function () {
-                /* Ready. Make a call to gapi.auth2.init or some other API */
-                gapi.auth2.init({
-                    client_id: '276359144026-14uh8l75abppnn4cps3gmfrmu8112ai3.apps.googleusercontent.com'
-                })
-            });
-        }
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
             console.log(profile.getId());
